@@ -1,0 +1,72 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[T5]{fontenc}
+\usepackage[left=2.5cm, right=1.5cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{indentfirst}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{listings}
+\newcommand{\lstprompt}{\$ } 
+
+% Tùy chỉnh cách hiển thị số/ký hiệu đầu dòng
+
+\lstset{
+	numbers=left,
+	numberstyle=\lstprompt,
+	numbersep=8pt,
+	basicstyle=\ttfamily\small,
+	frame=single
+}
+\begin{document}
+	\par Lệnh "grep": Global regular expression print - tìm kiếm một chuỗi hoặc một mẫu trong file hoặc dữ liệu đầu vào. Giúp lọc thông tin nhanh chóng từ các file văn bản, nhật ký hệ thống, hoặc đầu ra của các lệnh khác.
+	\par Cú pháp:
+	\begin{center}
+		\fbox{grep [OPTION] PATTERN [FILE...]}
+	\end{center}
+	\par Các tham số của lệnh grep:
+	\begin{itemize}
+		\item -i: Không phân biệt chữ hoa và chữ thường.
+		\item -n: Hiển thị số dòng kết quả.
+		\item -w: Tìm kiếm toàn bộ từ.
+		\item -c: Đếm số lần xuất hiện.
+		\item -v: Hiển thị các dòng không khớp với mẫu PATTERN.
+	\end{itemize}
+	\par Một tiến trình trong linux là một phiên bản (instance) của chương trình đang chạy. Mỗi lệnh hoặc ứng dụng được thực thi trong linux sẽ chạy như một tiến trình.
+	\par Nhân linux quản lý các tiến trình thông qua việc cấp phát các tài nguyên của hệ thống, e.g: CPU time và memory.
+	\par Các thông số của tiến trình: 
+	\begin{itemize}
+		\item Process ID (PID): Mã định danh duy nhất được gán cho một tiến trình.
+		\item Parent Process ID (PPID): ID của tiến trình cha tạo ra tiến trình hiện tại.
+		\item User ID (UID) và Group ID (GID): Xác định người dùng và nhóm sở hữu tiến trình.
+		\item Trạng thái tiến trình: E.g: running, sleeping, stopped ...
+		\item Mức sử dụng CPU và bộ nhớ.
+	\end{itemize}
+	\par Theo dõi trạng thái tiến trình bằng lệnh "ps" - Process Status. Cú pháp:
+	\begin{center}
+		\fbox{ps [OPTION]}
+	\end{center}
+	Có nhiều option cho lệnh ps, sử dụng ps -f khi muốn kiểm tra tiến trình của chính user hiện tại và các tiến trình liên kết với terminal.
+	\par Trong linux, chuyển hướng tiến trình cho phép kiểm soát luồng input, output và lỗi của tiến trình. Sử dụng trong việc lưu output vào một file, sử dụng output của một lệnh cho input của một lệnh khác hoặc loại bỏ output không mong muốn.
+	\par Các kiểu chuyển hướng tiến trình:
+	\begin{itemize}
+		\item >: Chuyển hướng output ghi đè vào một file.
+		\item >>: Chuyển hướng output ghi nối thêm vào một file.
+		\item <: Chuyển hướng input từ một file cụ thể thay vì lấy input nhập từ bàn phím.
+		\item 2>: Chuyển hướng lỗi chuẩn (stderr) đến một file.
+		\item 2>>: Nối thêm thông báo lỗi vào một file.
+		\item \&>: Chuyển hướng cả stdout và stderr đến một file.
+	\end{itemize}
+	\par Biến trong shell không phải khai báo trước kiểu dữ liệu và tên biến mà luôn được khai báo kèm với giá trị của biến, nếu dữ liệu của biến mà có khoảng trắng thì nội dung phải đặt trong dấu phẩy đôi".
+	\par Cú pháp khai báo biến trong shell:
+	\begin{center}
+		\fbox{variable\_name="variable\_value"}
+	\end{center}
+	\par Example:
+\begin{lstlisting}
+salutation="Hello"
+echo $salutation
+salutation="Yes Dear"
+echo $salutation
+salutation=7+5
+echo $salutation
+\end{lstlisting}
+
+\end{document}

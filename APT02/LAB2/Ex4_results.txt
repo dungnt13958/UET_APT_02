@@ -1,0 +1,36 @@
+total 152
+drwxr-x--- 22 ntd  ntd   4096 Sep 22 14:57 .
+drwxr-xr-x  3 root root  4096 Sep 17 16:12 ..
+drwxrwxr-x  3 ntd  ntd   4096 Sep 21 10:28 APT
+-rw-------  1 ntd  ntd   9810 Sep 22 14:53 .bash_history
+-rw-r--r--  1 ntd  ntd    220 Mar 31  2024 .bash_logout
+-rw-r--r--  1 ntd  ntd   3804 Sep 18 14:52 .bashrc
+drwx------ 16 ntd  ntd   4096 Sep 18 14:58 .cache
+drwx------ 19 ntd  ntd   4096 Sep 22 14:04 .config
+drwx------  3 ntd  ntd   4096 Sep 18 14:58 .copilot
+drwxr-xr-x  2 ntd  ntd   4096 Sep 18 14:49 Desktop
+drwxr-xr-x  2 ntd  ntd   4096 Sep 18 15:12 Documents
+drwxrwxr-x  3 ntd  ntd   4096 Sep 18 14:58 .dotnet
+drwxr-xr-x  2 ntd  ntd   4096 Sep 21 10:19 Downloads
+drwx------  2 ntd  ntd   4096 Sep 22  2026 .gnupg
+drwx------  4 ntd  ntd   4096 Sep 17 16:15 .local
+drwxr-xr-x  2 ntd  ntd   4096 Sep 17 16:15 Music
+-rw-------  1 ntd  ntd  12288 Sep 21 10:28 .openFile.c.swp
+drwxr-xr-x  2 ntd  ntd   4096 Sep 17 16:15 Pictures
+-rw-r--r--  1 ntd  ntd    807 Mar 31  2024 .profile
+drwxr-xr-x  2 ntd  ntd   4096 Sep 17 16:15 Public
+-rwxrw-r--  1 ntd  ntd      6 Sep 22 14:30 result.txt
+drwxrwxr-x  3 ntd  ntd   4096 Sep 18 14:53 .ros
+drwx------  9 ntd  ntd   4096 Sep 22 13:58 snap
+drwx------  2 ntd  ntd   4096 Sep 17 16:15 .ssh
+-rw-r--r--  1 ntd  ntd      0 Sep 17 16:16 .sudo_as_admin_successful
+drwxr-xr-x  2 ntd  ntd   4096 Sep 17 16:15 Templates
+-rw-------  1 ntd  ntd  12288 Sep 21 10:24 .test.c.swp
+drwxr-xr-x  2 ntd  ntd   4096 Sep 17 16:15 Videos
+-rw-------  1 ntd  ntd   8746 Sep 22 14:57 .viminfo
+drwxrwxr-x  4 ntd  ntd   4096 Sep 18 14:58 .vscode
+drwxrwxr-x  3 ntd  ntd   4096 Sep 18 14:58 .vscode-shared
+31
+9
+3
+367

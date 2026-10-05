@@ -1,0 +1,33 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[T5]{fontenc}
+\usepackage[left=2.5cm, right=1.5cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{indentfirst}
+\usepackage[hidelinks]{hyperref}
+\title{\textbf{Note Buổi 3}}
+\author{\textbf{Tuan Dung Nguyen}}
+\renewcommand{\familydefault}{\sfdefault}
+\begin{document}
+	\maketitle
+	\tableofcontents
+	\newpage
+	\section{Introduction}
+	\par 1 tiến trình là 1 cách thể heienj cua 1 chương trình thực thi.
+	\par Process memory: Các tiến trình được cấp cho một vùng bộ nhớ và lưu giữ địa chỉ của tiến trình đó. Cấu trúc bộ nhớ của tiến trình: (Sắp xếp theo tầng cao dần)
+	\begin{itemize}
+		\item Text: holds the program code. Read-only để tránh tự thay đổi nội dung và vẫn có thể được shared cho các tiến trình khác.
+		\item Data: lưu giữ các biến toàn cục và biến cục bộ. Khởi tạo và kết thúc các biến đó (thường kết thúc đẩy giá trị về 0).
+		\item Heap: Lưu giữ các cấu trúc dữ liệu động (dynamic), e.g: malloc(), calloc(), free() etc.
+		\item Kích thước của bộ nhớ heap và stack của tiến trình thường là không cố định do nó phát sinh trong quá trình chạy (cấp phát động).
+	\end{itemize}
+	\section{Process context}
+	\par Tất cả các OS đều cần phải quản lý các tiến trình. Điều này sinh ra 3 context của tiến trình:
+	\begin{itemize}
+		\item User context: process memory, env var(s), open fd's ...
+		\item Kernel context: PID, PPID, IO buffers...
+		\item Hardware context: Thanh ghi CPU, PC, ...
+	\end{itemize}
+	\section{CPU state}
+	\par Vòng đời 1 tiến trình sẽ có 5 trạng thái hay giai đoạn cơ bản: New process $\rightarrow^{admitted}$ Ready
+\end{document}

@@ -1,0 +1,19 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{fontspec}
+\usepackage[vietnamese]{babel}
+\usepackage[left=2.5cm, right=1.5cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\title{Note 4 APT}
+\author{Tuan Dung Nguyen}
+\begin{document}
+	\maketitle
+	\section{Process vs Threads}
+	Các tiến trình hoạt động song song với nhau và chúng truyền thông với nhau thông qua pipe hoặc signal. Điều này làm hao tốn nhiều bộ nhớ và thời gian. Vì thế threads - luồng được sinh ra để truy cập trực tiếp bộ nhớ. Tuy nhiên threads vẫn có hạn chế gây ra xung đột giữa các thread $\rightarrow$ Quản lý threads.
+	
+	Với các process, mỗi process được OS cấp phát cho 1 vùng nhớ riêng với các tầng giống nhau. Với threads, chúng dùng cùng vùng nhớ với process đang chạy nhưng vẫn có vùng nhớ riêng của chúng, nên sẽ có phân chia vùng nhớ với mỗi thread ở tầng \texttt{STACK} và vùng \texttt{CPU CONTEXT}, các tầng còn lại dùng chung.
+	
+	\section{Multi-Threaded Process}
+\end{document}

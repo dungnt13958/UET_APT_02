@@ -1,0 +1,56 @@
+\documentclass[12pt,a4paper,titlepage]{article}
+\usepackage[T5]{fontenc}
+\usepackage[left=2.5cm, right=1.5cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[hidelinks]{hyperref}
+\usepackage{indentfirst}
+\usepackage[scaled]{FiraMono}
+\renewcommand{\familydefault}{\sfdefault}
+\title{\textbf{Note Lab3 - APT}}
+\author{\textbf{Tuan Dung Nguyen}}
+\begin{document}
+	\maketitle
+	\tableofcontents
+	\newpage
+	\section{File trên Linux}
+	Có 3 phân loại file trong linux: Regular file, directory, special file (thường đi theo OS).
+	\par Trong Linux, nó coi tất cả mọi thứ là 1 tệp. Ví dụ một chương trình đang chạy tương đương với 1 tệp thực thi.
+	\par Mỗi tệp trong Linux không chỉ chứa dữ liệu mà còn lưu trữ nhiều thuộc tính mô tả được lưu trữ trong inode. Thông tin thuộc tính tệp từ inode đượ lấy thông qua việc sử dụng cấu trúc struct stat.
+	\section{System call - lện gọi hệ thống}
+	\par System call là giao diện chính giữa ứng dụng của người dùng và nhân Linux. System call cho phép chương trình yêu cầu dịch vụ từ OS: Xử lý file (open(), close(), read(), write(), fstat(), lstat()); Quản lý tiến trình(fork(), execve(), wait()); Giao tiếp mạng (socket(), bind()), connect(), recv(), send()).
+	\par System call thực hiện các thao tác cấp thấp và tường có giao diện đơn giản nhưng khó sử dụng hơn so với thư viện chuẩn C. Nhìn từ cấu trúc 4 lớp của Linux, lớp system call nằm ở lớp thứ 3, nằm giữa Kernel và User App\&Utilities (hoặc Library function).
+	
+	\section{Thông tin File}
+	\par Lệnh systemcall: stat()\\
+	Cú pháp
+	\begin{center}
+		\fbox{int stat(const char* pathname, struct stat* statbuf);}
+	\end{center}
+	\par System call: lstat()\\
+	Cú pháp:
+	\begin{center}
+		\fbox{int lstat(const char* pathname, struct stat* statbuf);}
+	\end{center}
+	\par System call: fstat() - Dùng khi file đã được mở\\
+	fstat() hoạt động trên một file descriptor thay vì 1 pathname.
+	\section{Các system call cơ bản với file}
+	\par Các lệnh system call cơ bản: open(), read(), write(), close().
+	\par Cú pháp open():
+	\begin{center}
+		\fbox{int open(const char* pathname, flags, )}
+	\end{center}
+	\par lseek():
+	\begin{center}
+		\fbox{off\_t lseek(int fd, off\_t offset, int whence);}
+	\end{center}
+	\begin{itemize}
+		\item fd: File descriptor.
+		\item offset: Số byte cần dịch chuyển. Có thể là số dương (tiến lên) hoặc âm (lùi lại).
+		\item whence: Điểm mốc từ đó offset được tính toán.
+	\end{itemize}
+	\section{Thư viện chuẩn C}
+	\par Các C-stdLib được xây dựng dựa trên các system call cung cấ giao diện dễ sử dụng hơn và thương bổ sung các tính năng tiện lợi, phổ biến nhất là GNU C library (glibc)).
+	\par Các hàm thư viện giúp programmer trừu tượng hóa nhiều chi tiết phức tạp khi sử dụng trực tiếp system call.
+	\par E.g: fopen(), fread(), scanf(), printf().
+\end{document}
